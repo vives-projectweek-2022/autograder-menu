@@ -1,6 +1,5 @@
 from numpy import size
 import pygame
-import pygame.camera
 import pygame_menu
 import cv2
 
@@ -9,7 +8,6 @@ pygame.init()
 size = (600,400)
 
 surface = pygame.display.set_mode((780, 540), pygame.RESIZABLE)
-snapshot = pygame.surface.Surface(size, 0, surface)
 menu = pygame_menu.Menu('Welcome', 780, 540,theme=pygame_menu.themes.THEME_SOLARIZED)
 
 def video():
@@ -23,7 +21,7 @@ def video():
 menu.add.button('Camera', video)
 menu.add.button('New File')
 menu.add.button('Answers')
-menu.add.button('Print Scores', #Functie)
+menu.add.button('Print Scores')
 menu.add.button('Exit', pygame_menu.events.EXIT)
 menu.mainloop(surface)
 
