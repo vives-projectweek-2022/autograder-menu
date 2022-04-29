@@ -9,6 +9,9 @@ size = (600,400)
 
 surface = pygame.display.set_mode((780, 540), pygame.RESIZABLE)
 menu = pygame_menu.Menu('Welcome', 780, 540,theme=pygame_menu.themes.THEME_SOLARIZED)
+help_menu = pygame_menu.Menu('Help', 780, 540, theme=pygame_menu.themes.THEME_SOLARIZED)
+
+
 
 def video():
     while (True):
@@ -22,6 +25,8 @@ menu.add.button('Camera', video)
 menu.add.button('New File')
 menu.add.button('Answers')
 menu.add.button('Print Scores')
+menu.add.button('Help', help_menu)
 menu.add.button('Exit', pygame_menu.events.EXIT)
+
 menu.mainloop(surface)
 
